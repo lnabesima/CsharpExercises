@@ -26,8 +26,21 @@ class Program
     {
         List<string> classificacoes = new List<string>();
 
-        // TODO: Itere sobre cada número de anos de experiência na lista 'anosExperiencia' e preencha a lista de classificações.
-
+        foreach (int ano in anosExperiencia)
+        {
+            if (ano <= 3)
+            {
+                classificacoes.Add("Junior");
+            }
+            else if (ano <= 5)
+            {
+                classificacoes.Add("Pleno");
+            }
+            else
+            {
+                classificacoes.Add("Senior");
+            }
+        }
         return classificacoes;
     }
 }
